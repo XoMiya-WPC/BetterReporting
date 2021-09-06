@@ -27,7 +27,7 @@ This plugin WILL NOT WORK on previous versions
 
 * **CustomMessage:** This is a simple Message that can be added alongside the embed. String format ofc.
 
-* **LocalReportColor + CheaterReportColor:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!!
+* **LocalReportColor + CheaterReportColor:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!! These will be changed respectively.
 
 * **VerboseMode:** Outputs more console information
 
@@ -40,7 +40,7 @@ This plugin was created due to extraordinary request by server owners running ex
 BetterReporting is a port of Report-INtegration.
 This plugin was made in collaboration by Somewhatsane, Rin & Myself. 
 
-For help or issues Contact me on Discord @ XoMiya#0113 or join my discord (https://discord.gg/DxWXw9jmXn)
+For help or issues Contact me on Discord @ XoMiya#0113 or join my [discord](https://discord.gg/DxWXw9jmXn "The Lab").
 
 <h2>Webhook Help</h2>
 **Webhook on Discord**
