@@ -19,12 +19,17 @@ This plugin WILL NOT WORK on previous versions
 | CheaterReportColor  | String | 16711680  |
 | VerboseMode  | Bool  | false  |
 
-> **IsEnabled:** Defines if the plugin will be enabled or not.
-> **LocalRoleIds + CheaterRoleIds:** A list of pingable role ids in the format of <@&id> <@&id>. The @ defines it as a mention and the & specifies it is a role. These will be sent for local reports and cheater reports respectively.
-> **Webhook:** The webhook URL. Make sure to paste the entire thing. For help see below.
-> **CustomMessage:** This is a simple Message that can be added alongside the embed. String format ofc.
-> **LocalReportColor + CheaterReportColor:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!!
-> **VerboseMode:** Outputs more console information
+* **IsEnabled:** Defines if the plugin will be enabled or not.
+
+* **LocalRoleIds + CheaterRoleIds:** A list of pingable role ids in the format of <@&id> <@&id>. The @ defines it as a mention and the & specifies it is a role. These will be sent for local reports and cheater reports respectively.
+
+* **Webhook:** The webhook URL. Make sure to paste the entire thing. For help see below.
+
+* **CustomMessage:** This is a simple Message that can be added alongside the embed. String format ofc.
+
+* **LocalReportColor + CheaterReportColor:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!!
+
+* **VerboseMode:** Outputs more console information
 
 <h1>Features</h1>
 * Role Mentions for both Local and Cheater reports allowing you to alert staff as soon as a report is made
