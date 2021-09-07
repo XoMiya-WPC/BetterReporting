@@ -44,6 +44,7 @@ This plugin was made in collaboration by Somewhatsane, Rin & Myself.
 For help or issues Contact me on Discord @ XoMiya#0113 or join my [discord](https://discord.gg/DxWXw9jmXn "The Lab").
 
 <h2>Webhook Help</h2>
+
 **Webhook on Discord**
 1. Go to **Server settings** -> **Webhooks** -> **Create Webhook**.
 2. Setup name, avatar and the channel, where it will be posted. Copy *Webhook URL*.
