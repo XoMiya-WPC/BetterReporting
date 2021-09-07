@@ -32,6 +32,7 @@ This plugin WILL NOT WORK on previous versions
 * **VerboseMode:** Outputs more console information
 
 <h1>Features</h1>
+
 * Role Mentions for both Local and Cheater reports allowing you to alert staff as soon as a report is made
 
 <h1>Info & Contact</h1>
