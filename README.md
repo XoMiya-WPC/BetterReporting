@@ -17,6 +17,7 @@ This plugin WILL NOT WORK on previous versions
 | CustomMessage  | String  | A new **Report** has been summitted :pencil:  |
 | LocalReportColor  | String  | 215  |
 | CheaterReportColor  | String | 16711680  |
+| ACMessage  | String | A new report has been submitted - Check Discord  |
 | VerboseMode  | Bool  | false  |
 
 * **IsEnabled:** Defines if the plugin will be enabled or not.
