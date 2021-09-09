@@ -50,7 +50,7 @@ This plugin **WILL NOT WORK** on previous versions
 2. Setup name, avatar and the channel, where it will be posted. Copy *Webhook URL*.
 3. Click **`Save`** and then the **`Done`** button.
 
-<h2>Discord Role ID help</h2>
+<h2>Discord Role ID Help</h2>
 
 **Enabling Dev Mode**
 1. Visit this link [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID "Where can I find my User/Server/Message ID?")
