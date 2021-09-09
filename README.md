@@ -50,8 +50,9 @@ This plugin WILL NOT WORK on previous versions
 3. Click **`Save`** and then the **`Done`** button.
 
 <h2>Discord Role ID help</h2>
+
 **Enabling Dev Mode**
-1. Visit this link [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID- "Where can I find my User/Server/Message ID?")
+1. Visit this link [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID "Where can I find my User/Server/Message ID?")
 2. Once you have done that right click on your role and copy it. Then replace the `id` part of <@&id> with your copied id.
 3. Use my ploogin and have fun!
 
