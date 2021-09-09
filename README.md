@@ -37,9 +37,9 @@ This plugin WILL NOT WORK on previous versions
 
 * **Local_Report_Color + Cheater_Report_Color:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!! These will be changed respectively.
 
-* **AcMessage:** Defines the message that will be sent ingame to anyone that has remote admin chat.
+* **Ac_Message:** Defines the message that will be sent ingame to anyone that has remote admin chat.
 
-* **VerboseMode:** Outputs more console information if enabled. Only enter `true` or `false`.
+* **Verbose_Mode:** Outputs more console information if enabled. Only enter `true` or `false`.
 
 
 <h2>Webhook Help</h2>
@@ -48,6 +48,12 @@ This plugin WILL NOT WORK on previous versions
 1. Go to **Server settings** -> **Webhooks** -> **Create Webhook**.
 2. Setup name, avatar and the channel, where it will be posted. Copy *Webhook URL*.
 3. Click **`Save`** and then the **`Done`** button.
+
+<h2>Discord Role ID help</h2>
+**Enabling Dev Mode**
+1. Visit this link [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID- "Where can I find my User/Server/Message ID?")
+2. Once you have done that right click on your role and copy it. Then replace the `id` part of <@&id> with your copied id.
+3. Use my ploogin and have fun!
 
 <h2>Error and Warn Codes Help</h2>
 <h4>Errors</h4>
