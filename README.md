@@ -47,7 +47,7 @@ This plugin **WILL NOT WORK** on previous versions
 
 **Webhook on Discord**
 1. Go to **Server settings** -> **Webhooks** -> **Create Webhook**.
-2. Setup name, avatar and the channel, where it will be posted. `Copy *Webhook URL*`.
+2. Setup name, avatar and the channel, where it will be posted. `Copy Webhook URL`.
 3. Click **`Save`** and then the **`Done`** button.
 
 <h2>Discord Role ID Help</h2>
