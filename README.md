@@ -57,10 +57,14 @@ This plugin WILL NOT WORK on previous versions
 3. Use my ploogin and have fun!
 
 <h2>Error and Warn Codes Help</h2>
+
 <h4>Errors</h4>
-* **[Error Code 1]** - *Webhook URL is not set. Halting plugin startup.* Error code 1 refers to someone leaving the Webhook Value in the config file blank or using whitespace characters. Ensure your webhook URL is exactly as above^^^
+
+* **[Error Code 1]** - *Webhook URL is not set. Halting plugin startup.* Error code 1 refers to someone leaving the Webhook Value in the config file blank or using whitespace characters. Ensure your webhook URL is exactly as above^^^*
 * **[Error Code 2]** - *Colour is empty or contains nullspace. Halting plugin startup.* Error code 2 indicates you have not entered a value into either the `LocalReportColor` or `CheaterReportColor` configs. The plugin will not run until it has been fixed.
+
 <h4>Warns</h4>
+
 * **[Warn Code 1]** - *You have not provided any Cheater Role Ids to be mentioned.* This will not prevent the plugin from working but will mean no mentions will be sent for cheater reports. `LocalRoleIds` value is empty.
 * **[Warn Code 2]** - *You have not provided any Local Role Ids to be mentioned.* This will not prevent the plugin from working but will mean no mentions will be sent for local reports. `CheaterRoleIds` value is empty.
 * **[Warn Code 3]** - *You have not provided any Management Role Ids to be mentioned.* This will not prevent the plugin from working but will mean no mentions will be sent for reports against remote admin authenticated users. `RoleIds` value is empty.
