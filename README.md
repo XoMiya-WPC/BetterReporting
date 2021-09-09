@@ -21,7 +21,7 @@ This plugin WILL NOT WORK on previous versions
 | LocalReportColor  | String  | 255  |
 | CheaterReportColor  | String | 16711680  |
 | AcMessage  | String | A new report has been submitted - Check Discord  |
-| VerboseMode  | Bool  | false  |
+| VerboseMode  | Boolean  | false  |
 
 * **Is_Enabled:** Defines if the plugin will be enabled or not. Only enter `true` or `false`.
 
