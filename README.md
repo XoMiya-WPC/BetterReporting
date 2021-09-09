@@ -61,7 +61,7 @@ This plugin **WILL NOT WORK** on previous versions
 
 <h4>Errors</h4>
 
-* **[Error Code 1]** - *Webhook URL is not set. Halting plugin startup.* Error code 1 refers to someone leaving the Webhook Value in the config file blank or using whitespace characters. Ensure your webhook URL is exactly as above^^^*
+* **[Error Code 1]** - *Webhook URL is not set. Halting plugin startup.* Error code 1 refers to someone leaving the Webhook Value in the config file blank or using whitespace characters. Ensure your webhook URL is exactly as above^^^
 * **[Error Code 2]** - *Colour is empty or contains nullspace. Halting plugin startup.* Error code 2 indicates you have not entered a value into either the `LocalReportColor` or `CheaterReportColor` configs. The plugin will not run until it has been fixed.
 
 <h4>Warns</h4>
