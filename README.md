@@ -10,27 +10,53 @@ This plugin WILL NOT WORK on previous versions
 
 | Config  | Type | Value |
 | ------------- | ------------- | ------------- |
-| IsEnabled  | Boolean  | true  |
-| LocalRoleIds  | String  | Empty  |
-| CheaterRoleIds  | String  | Empty  |
+| Is_Enabled  | Boolean  | true  |
+| Override_Name  | Boolean  | false  |
+| Server_Name  | String  | Empty  |
+| Local_Role_Ids  | String  | Empty  |
+| Cheater_Role_Ids  | String  | Empty  |
+| Management_Role_Ids  | String  | Empty  |
 | Webhook  | String  | Empty  |
-| CustomMessage  | String  | A new **Report** has been summitted :pencil:  |
-| LocalReportColor  | String  | 215  |
+| Custom_Message  | String  | A new **Report** has been summitted :pencil:  |
+| LocalReportColor  | String  | 255  |
 | CheaterReportColor  | String | 16711680  |
-| ACMessage  | String | A new report has been submitted - Check Discord  |
+| AcMessage  | String | A new report has been submitted - Check Discord  |
 | VerboseMode  | Bool  | false  |
 
-* **IsEnabled:** Defines if the plugin will be enabled or not.
+* **Is_Enabled:** Defines if the plugin will be enabled or not. Only enter `true` or `false`.
 
-* **LocalRoleIds + CheaterRoleIds:** A list of pingable role ids in the format of <@&id> <@&id>. The @ defines it as a mention and the & specifies it is a role. These will be sent for local reports and cheater reports respectively.
+* **Override_Name:** Defines if the plugin will use the overriden Server Name instead of the one pinched from config_gameplay.txt.
+
+* **Server_Name:** Defines the name you wish the embed to refer to the server as instead of the default. 
+
+* **Local_Role_Ids + Cheater_Role_Ids:** A list of pingable role ids in the format of <@&id> <@&id>. The @ defines it as a mention and the & specifies it is a role. These will be sent for local reports and cheater reports respectively. To get an ID of a role see help section.
 
 * **Webhook:** The webhook URL. Make sure to paste the entire thing. For help see below.
 
-* **CustomMessage:** This is a simple Message that can be added alongside the embed. String format ofc.
+* **Custom_Message:** This is a simple Message that can be added alongside the embed. String format ofc.
 
-* **LocalReportColor + CheaterReportColor:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!! These will be changed respectively.
+* **Local_Report_Color + Cheater_Report_Color:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!! These will be changed respectively.
 
-* **VerboseMode:** Outputs more console information
+* **AcMessage:** Defines the message that will be sent ingame to anyone that has remote admin chat.
+
+* **VerboseMode:** Outputs more console information if enabled. Only enter `true` or `false`.
+
+
+<h2>Webhook Help</h2>
+
+**Webhook on Discord**
+1. Go to **Server settings** -> **Webhooks** -> **Create Webhook**.
+2. Setup name, avatar and the channel, where it will be posted. Copy *Webhook URL*.
+3. Click **`Save`** and then the **`Done`** button.
+
+<h2>Error and Warn Codes Help</h2>
+<h4>Errors</h4>
+* **[Error Code 1]** - *Webhook URL is not set. Halting plugin startup.* Error code 1 refers to someone leaving the Webhook Value in the config file blank or using whitespace characters. Ensure your webhook URL is exactly as above^^^
+* **[Error Code 2]** - *Colour is empty or contains nullspace. Halting plugin startup.* Error code 2 indicates you have not entered a value into either the `LocalReportColor` or `CheaterReportColor` configs. The plugin will not run until it has been fixed.
+<h4>Warns</h4>
+* **[Warn Code 1]** - *You have not provided any Cheater Role Ids to be mentioned.* This will not prevent the plugin from working but will mean no mentions will be sent for cheater reports. `LocalRoleIds` value is empty.
+* **[Warn Code 2]** - *You have not provided any Local Role Ids to be mentioned.* This will not prevent the plugin from working but will mean no mentions will be sent for local reports. `CheaterRoleIds` value is empty.
+* **[Warn Code 3]** - *You have not provided any Management Role Ids to be mentioned.* This will not prevent the plugin from working but will mean no mentions will be sent for reports against remote admin authenticated users. `RoleIds` value is empty.
 
 <h1>Features</h1>
 
@@ -43,10 +69,3 @@ BetterReporting is a port of Report-INtegration.
 This plugin was made in collaboration by Somewhatsane, Rin & Myself. 
 
 For help or issues Contact me on Discord @ XoMiya#0113 or join my [discord](https://discord.gg/DxWXw9jmXn "The Lab").
-
-<h2>Webhook Help</h2>
-
-**Webhook on Discord**
-1. Go to **Server settings** -> **Webhooks** -> **Create Webhook**.
-2. Setup name, avatar and the channel, where it will be posted. Copy *Webhook URL*.
-3. Click **`Save`** and then the **`Done`** button.
