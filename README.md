@@ -4,7 +4,8 @@ An SCP: Secret Laboratory Plugin that runs on the [EXILED Framework](https://git
 <h1>Coming Soon:tm:</h1>
 
 <h1>Requirements</h1>
-This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") 3.0.0 
+
+This plugin requires [EXILED Framework](https://github.com/Exiled-Team/EXILED "Exiled Releases") 3.0.0 
 This plugin **WILL NOT WORK** on previous versions
 <h1>Config</h1>
 
@@ -30,7 +31,7 @@ This plugin **WILL NOT WORK** on previous versions
 * **Server_Name:** Defines the name you wish the embed to refer to the server as instead of the default. 
 
 * **Local_Role_Ids + Cheater_Role_Ids:** A list of pingable role ids in the format of <@&id> <@&id>. The @ defines it as a mention and the & specifies it is a role. These will be sent for local reports and cheater reports respectively. To get an ID of a role see help section.
-[EXILED Framework](https://github.com/Exiled-Team/EXILED "Exiled")
+* 
 * **Webhook:** The webhook URL. Make sure to paste the entire thing. For help see below.
 
 * **Custom_Message:** This is a simple Message that can be added alongside the embed. String format ofc.
