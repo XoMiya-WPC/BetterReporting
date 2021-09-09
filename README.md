@@ -5,7 +5,7 @@ An SCP: Secret Laboratory Plugin that runs on the [EXILED Framework](https://git
 
 <h1>Requirements</h1>
 
-This plugin requires [EXILED Framework](https://github.com/Exiled-Team/EXILED "Exiled Releases") 3.0.0 
+This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") 3.0.0 
 This plugin **WILL NOT WORK** on previous versions
 <h1>Config</h1>
 
