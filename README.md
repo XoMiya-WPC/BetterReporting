@@ -30,7 +30,7 @@ This plugin **WILL NOT WORK** on previous versions
 * **Server_Name:** Defines the name you wish the embed to refer to the server as instead of the default. 
 
 * **Local_Role_Ids + Cheater_Role_Ids:** A list of pingable role ids in the format of <@&id> <@&id>. The @ defines it as a mention and the & specifies it is a role. These will be sent for local reports and cheater reports respectively. To get an ID of a role see help section.
-
+[EXILED Framework](https://github.com/Exiled-Team/EXILED "Exiled")
 * **Webhook:** The webhook URL. Make sure to paste the entire thing. For help see below.
 
 * **Custom_Message:** This is a simple Message that can be added alongside the embed. String format ofc.
