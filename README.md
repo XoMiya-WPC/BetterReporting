@@ -1,11 +1,11 @@
 # BetterReporting
-An SCP: Secret Laboratory Plugin that runs on the E.X.I.L.E.D Framework. It improves the reporting feature of SL by adding mentions, and more information into Discord Webhooks to ensure staff are efficient when dealing with reports.
+An SCP: Secret Laboratory Plugin that runs on the [EXILED Framework](https://github.com/Exiled-Team/EXILED "Exiled"). It improves the reporting feature of SL by adding mentions, and more information into Discord Webhooks to ensure staff are efficient when dealing with reports.
 
 <h1>Coming Soon:tm:</h1>
 
 <h1>Requirements</h1>
-This plugin requires EXILED 3.0.0 
-This plugin WILL NOT WORK on previous versions
+This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED "Exiled") 3.0.0 
+This plugin **WILL NOT WORK** on previous versions
 <h1>Config</h1>
 
 | Config  | Type | Value |
@@ -71,12 +71,18 @@ This plugin WILL NOT WORK on previous versions
 
 <h1>Features</h1>
 
-* Role Mentions for both Local and Cheater reports allowing you to alert staff as soon as a report is made
+* Role Mentions for both Local and Cheater Reports allowing you to alert staff as soon as a report is made.
+* Custom Colours for both Local and Cheater Reports.
+* Optional ping for a staff manager like position if someone with remote admin access gets reported.
+* Custom In Game message to admin chat to notify of a report.
+* Option to have a custom name used in the embed as some servers have alternate things that rich text cannot strip i.e. \n or other.
+* Prevents reporting of self and Northwood Staff reducing spam of reports.
+* Sends players class in report information.
 
 <h1>Info & Contact</h1>
 This plugin was created due to extraordinary request by server owners running exiled servers. 
 
 BetterReporting is a port of Report-INtegration.
-This plugin was made in collaboration by Somewhatsane, Rin & Myself. 
+This plugin was made in collaboration by [Somewhatsane](https://github.com/SomewhatSane "SomewhatSane") & Myself using Rin's original Report-INtegration. 
 
 For help or issues Contact me on Discord @ XoMiya#0113 or join my [discord](https://discord.gg/DxWXw9jmXn "The Lab").
