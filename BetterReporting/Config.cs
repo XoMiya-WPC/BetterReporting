@@ -17,8 +17,8 @@ namespace BetterReporting
         public string CheaterRoleIds { get; set; }
         [Description("List of role IDs that will be pinged if a user with remote admin authentication is reported. This role should probably mention some management or something. - Accepts String (Example '<@&managerid> <@&ownerid> ').")]
         public string ManagementRoleIds { get; set; }
-        [Description("Your Webhook URL from Discord. Copy and paste it in its entirity.")]
-        public string Webhook { get; set; } = "https://discord.com/api/webhooks/XXXX/XXXX";
+        [Description("Your Webhook URL from Discord. Copy and paste it in its entirity. - Example - https://discord.com/api/webhooks/XXXX/XXXX")]
+        public string Webhook { get; set; }
         [Description("A Custom Message that will send with the webhook alongside the role mentions. This is a string and can work with discord formatting i.e ('A new **Report** has been summitted :pencil:').")]
         public string CustomMessage { get; set; } = "A new **Report** has been summitted. :pencil:";
         [Description("You can visit this website for help converting your colours: https://www.mathsisfun.com/hexadecimal-decimal-colors.html. This is the custom DECIMAL colour of your embed for Local Reports. If you have a hex colour code, please convert it first to decimal. - Accepts Decimal")]
