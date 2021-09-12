@@ -1,8 +1,6 @@
 # BetterReporting
 An SCP: Secret Laboratory Plugin that runs on the [EXILED Framework](https://github.com/Exiled-Team/EXILED "Exiled"). It improves the reporting feature of SL by adding mentions, and more information into Discord Webhooks to ensure staff are efficient when dealing with reports.
 
-<h1>Coming Soon:tm:</h1>
-
 <h1>Requirements</h1>
 
 This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") 3.0.0 
