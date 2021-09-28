@@ -84,4 +84,4 @@ This plugin was created due to extraordinary request by server owners running ex
 BetterReporting is a port of Report-INtegration.
 This plugin was made in collaboration by [Somewhatsane](https://github.com/SomewhatSane "SomewhatSane") & Myself using Rin's original Report-INtegration. 
 
-For help or issues Contact me on Discord @ XoMiya#0113 or join my [discord](https://discord.gg/DxWXw9jmXn "The Lab").
+For help or issues Contact me on Discord @ XoMiya#6113 or join my [discord](https://discord.gg/DxWXw9jmXn "XoMiya's Kitchen").
