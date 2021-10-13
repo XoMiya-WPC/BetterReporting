@@ -85,4 +85,5 @@ BetterReporting is a port of Report-INtegration.
 This plugin was made in collaboration by [Somewhatsane](https://github.com/SomewhatSane "SomewhatSane") & Myself using Rin's original Report-INtegration. 
 
 For help or issues Contact me on Discord @ XoMiya#6113 or join my [discord](https://discord.gg/DxWXw9jmXn "XoMiya's Kitchen").
+
 ![img](https://img.shields.io/github/downloads/XoMiya-WPC/BetterReporting/total?style=for-the-badge) - the newest version downloads
