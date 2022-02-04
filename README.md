@@ -3,7 +3,7 @@ An SCP: Secret Laboratory Plugin that runs on the [EXILED Framework](https://git
 
 <h1>Requirements</h1>
 
-This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") `4.2.2`
+This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") `4.2.3`
 This plugin **WILL NOT WORK** on previous versions
 <h1>Config</h1>
 
@@ -15,13 +15,11 @@ This plugin **WILL NOT WORK** on previous versions
 | Local_Role_Ids  | String  | Empty  |
 | Cheater_Role_Ids  | String  | Empty  |
 | Management_Role_Ids  | String  | Empty  |
-| Local_Report_Channel_Id  | Integer | 0000000000 |
-| Cheater_Report_Channel_Id  | Integer | 0000000000 |
-| Report_Archives_Channel_Id  | Integer | 0000000000 |
 | Webhook  | String  | Empty  |
 | Custom_Message  | String  | A new **Report** has been summitted :pencil:  |
-| Local_Report_Color  | String  | 255  |
-| Cheater_Report_Color  | String | 16711680  |
+| Default_Local_Report_Color  | String  | 255  |
+| Default_Cheater_Report_Color  | String | 16711680  |
+| Report_Color_Flags | Dictionary | See Below |
 | Ac_Message  | String | A new report has been submitted - Check Discord  |
 | Global_Badge_Lookup | Boolean | true |
 | Verbose_Mode  | Boolean  | false  |
@@ -36,17 +34,12 @@ This plugin **WILL NOT WORK** on previous versions
 
 * **Management_Role_Ids:** A list of pingable role ids in the format off <@&id> <@&id>. The `@` defines it as a mention and `&` specifies it is a role. These will be sent for staff getting reported and when a report is not claimed.
 
-* **Local_Report_Channel_Id:** An integer value representing the Discord Server Channel ID where Local Reports will be sent. If you do not change this from the base it will not start and the plugin will alert you in console.
-
-* **Cheater_Report_Channel_Id:** An integer value representing the Discord Server Channel ID where Cheater Reports will be sent. If you do not change this from the base it will not start and the plugin will alert you in console.
-
-* **Report_Archives_Channel_Id:** An integer value representing the Discord Server Channel ID where all Reports will be sent once completed. It is recommended to make this a seperate channel to the regular logging channels. If you do not change this from the base it will send a warning to the console.
-
 * **Webhook:** The webhook URL. Make sure to paste the entire thing. For help see below.
 
 * **Custom_Message:** This is a simple Message that can be added alongside the embed. String format ofc.
 
-* **Local_Report_Color + Cheater_Report_Color:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!! These will be changed respectively.
+* **Default_Local_Report_Color + Default_Cheater_Report_Color:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!! These will be changed respectively.
+* **Report_Color_Flags:** This is a dictionary following the format of `"Text": Decimalcolor` and allows a phrase in the form of a string (left) to be checked to see if it is present within the report reason. If it is the report embed colour will be changed to the decimal color (right). See Example of Config below for more help.
 
 * **Ac_Message:** Defines the message that will be sent ingame to anyone that has remote admin chat.
 
@@ -74,7 +67,7 @@ This plugin **WILL NOT WORK** on previous versions
 <h4>Errors</h4>
 
 * **[Error Code 1]** - *Webhook URL is not set. Halting plugin startup.* Error code 1 refers to someone leaving the Webhook Value in the config file blank or using whitespace characters. Ensure your webhook URL is exactly as above^^^
-* **[Error Code 2]** - *Colour is empty or contains nullspace. Halting plugin startup.* Error code 2 indicates you have not entered a value into either the `LocalReportColor` or `CheaterReportColor` configs. The plugin will not run until it has been fixed.
+* **[Error Code 5/6]** - *Colour is empty or contains nullspace. Halting plugin startup.* Error code 2 indicates you have not entered a value into either the `Default_Local_Report_Color` or `Default_Cheater_Report_Color` configs. The plugin will not run until it has been fixed.
 
 <h4>Warns</h4>
 
@@ -85,22 +78,57 @@ This plugin **WILL NOT WORK** on previous versions
 <h1>Features</h1>
 
 * Role Mentions for both Local and Cheater Reports allowing you to alert staff as soon as a report is made.
-* Custom Colours for both Local and Cheater Reports.
+* Custom Colours for both Local and Cheater Reports & the ability to have the colour change depending on report reason contents.
 * Optional ping for a staff manager like position if someone with remote admin access gets reported.
 * Custom In Game message to admin chat to notify of a report.
 * Option to have a custom name used in the embed as some servers have alternate things that rich text cannot strip i.e. \n or other.
 * Prevents reporting of self and Northwood Staff reducing spam of reports.
 * Sends players class in report information.
+* Sends both Reporter and Reported players Remote Admin Flags such as server mutes and RA Auth Status.
+* Global Badge and Server Badge Status are shown in reports if they are present.
+* Northwood Staff will not be reported for cheating to reduce spam reports sent the Global Moderation Team.
+* Plugin will send Flags to the console if a player with Remote Admin Authentication is reported.
 
 <h1>Info & Contact</h1>
 This plugin was created due to extraordinary request by server owners running exiled servers. 
-
-Better Reporting is a port of Report-INtegration.
 
 This plugin was made in collaboration by [Somewhatsane](https://github.com/SomewhatSane "SomewhatSane") & Myself.
 
 
 For help or issues check out the [Setup Guide](https://www.betterreporting.net/index.php/setup-guide "Setup Guide | Better Reporting") or alternatively Contact me by joining my [discord](https://discord.gg/DxWXw9jmXn "XoMiya's Kitchen").
+<h2>Default Config Generated</h2>
+```yaml
+Better_Reporting:
+# Whether or not the plugin is enabled.
+  is_enabled: true
+  # Whether or not to override the server name with the Server_Name Config Value - Accepts Bool.
+  override_name: false
+  # Defines the overriden server name - Acepts String.
+  server_name: 
+  # List of role IDs that will be pinged when a Local Report is sent. - Accepts String (Example '<@&modid> <@&adminid>').
+  local_role_ids: 
+  # List of role IDs that will be pinged when a Cheater Report is sent. - Accepts String (Example '<@&modid> <@&adminid>').
+  cheater_role_ids: 
+  # List of role IDs that will be pinged if a user with remote admin authentication is reported. This role should probably mention some management or something. - Accepts String (Example '<@&managerid> <@&ownerid> ').
+  management_role_ids: 
+  # Your Webhook URL from Discord. Copy and paste it in its entirity. - Example - https://discord.com/api/webhooks/XXXX/XXXX
+  webhook: 
+  # A Custom Message that will send with the webhook alongside the role mentions. This is a string and can work with discord formatting i.e ('A new **Report** has been summitted :pencil:').
+  custom_message: 'A new **Report** has been summitted. :pencil:'
+  # You can visit this website for help converting your colours: https://www.mathsisfun.com/hexadecimal-decimal-colors.html. This is the custom DECIMAL colour of your embed for Local Reports if no Report Colour Flags are apparent. If you have a hex colour code, please convert it first to decimal. - Accepts Decimal
+  default_local_report_color: 16711680
+  # This is the custom DECIMAL colour of your embed for Cheater Reports if no Report Colour Flags are apparent. If you have a hex colour code, please convert it first to decimal. - Accepts Decimal
+  default_l_cheater_report_color: 16711680
+  # Report Colour Flags - Have report auto change colour based on report message contents (string: uint)
+  report_color_flags:
+    Rule 1: 16473600
+  # Message sent to ingame staff when a report is submitted. - Accepts String
+  ac_message: A new report has been submitted. - Check Discord
+  # Show Global Badges on reports? - Accepts Bool (Def: true)
+  global_badge_lookup: true
+  # Verbose mode. Prints more Debug console messages.
+  verbose_mode: false
+```
 
 ![img](https://img.shields.io/github/downloads/XoMiya-WPC/BetterReporting/total?style=for-the-badge)
 
