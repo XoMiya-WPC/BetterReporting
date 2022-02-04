@@ -96,7 +96,9 @@ This plugin was made in collaboration by [Somewhatsane](https://github.com/Somew
 
 
 For help or issues check out the [Setup Guide](https://www.betterreporting.net/index.php/setup-guide "Setup Guide | Better Reporting") or alternatively Contact me by joining my [discord](https://discord.gg/DxWXw9jmXn "XoMiya's Kitchen").
+
 <h2>Default Config Generated</h2>
+
 ```yaml
 Better_Reporting:
 # Whether or not the plugin is enabled.
