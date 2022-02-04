@@ -1,11 +1,11 @@
 # BetterReporting
 An SCP: Secret Laboratory Plugin that runs on the [EXILED Framework](https://github.com/Exiled-Team/EXILED "Exiled"). It improves the reporting feature of SL by adding mentions, and more information into Discord Webhooks to ensure staff are efficient when dealing with reports.
 
-<h1>Requirements</h1>
+<h2>Requirements</h2>
 
 This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") `4.2.3`
 This plugin **WILL NOT WORK** on previous versions
-<h1>Config</h1>
+<h2>Config</h2>
 
 | Config  | Type | Value |
 | ------------- | ------------- | ------------- |
@@ -48,21 +48,21 @@ This plugin **WILL NOT WORK** on previous versions
 * **Verbose_Mode:** Outputs more console information if enabled. Only enter `true` or `false`.
 
 
-<h2>Webhook Help</h2>
+<h3>Webhook Help</h3>
 
 **Webhook on Discord**
 1. Go to **Server settings** -> **Webhooks** -> **Create Webhook**.
 2. Setup name, avatar and the channel, where it will be posted. `Copy Webhook URL`.
 3. Click **`Save`** and then the **`Done`** button.
 
-<h2>Discord Role ID Help</h2>
+<h3>Discord Role ID Help</h3>
 
 **Enabling Dev Mode**
 1. Visit this link [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID "Where can I find my User/Server/Message ID?")
 2. Once you have done that right click on your role and copy it. Then replace the `id` part of <@&id> with your copied id.
 3. Use my ploogin and have fun!
 
-<h2>Error and Warn Codes Help</h2>
+<h3>Error and Warn Codes Help</h3>
 
 <h4>Errors</h4>
 
@@ -75,7 +75,7 @@ This plugin **WILL NOT WORK** on previous versions
 * **[Warn Code 2]** - *You have not provided any Local Role Ids to be mentioned.* This will not prevent the plugin from working but will mean no mentions will be sent for local reports. `CheaterRoleIds` value is empty.
 * **[Warn Code 3]** - *You have not provided any Management Role Ids to be mentioned.* This will not prevent the plugin from working but will mean no mentions will be sent for reports against remote admin authenticated users. `RoleIds` value is empty.
 
-<h1>Features</h1>
+<h2>Features</h2>
 
 * Role Mentions for both Local and Cheater Reports allowing you to alert staff as soon as a report is made.
 * Custom Colours for both Local and Cheater Reports & the ability to have the colour change depending on report reason contents.
