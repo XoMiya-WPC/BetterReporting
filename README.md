@@ -17,7 +17,7 @@ This plugin **WILL NOT WORK** on previous versions
 | Management_Role_Ids  | String  | Empty  |
 | Webhook  | String  | Empty  |
 | Custom_Message  | String  | A new **Report** has been summitted :pencil:  |
-| Default_Local_Report_Color  | uint  | 255  |
+| Default_Local_Report_Color  | uint  | 16711680  |
 | Default_Cheater_Report_Color  | uint | 16711680  |
 | Report_Color_Flags | Dictionary | See Below |
 | Ac_Message  | String | A new report has been submitted - Check Discord  |
