@@ -3,7 +3,7 @@ An SCP: Secret Laboratory Plugin that runs on the [EXILED Framework](https://git
 
 <h1>Requirements</h1>
 
-This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") `3.0.0`
+This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") `4.2.2`
 This plugin **WILL NOT WORK** on previous versions
 <h1>Config</h1>
 
@@ -15,12 +15,16 @@ This plugin **WILL NOT WORK** on previous versions
 | Local_Role_Ids  | String  | Empty  |
 | Cheater_Role_Ids  | String  | Empty  |
 | Management_Role_Ids  | String  | Empty  |
+| Local_Report_Channel_Id  | Integer | 0000000000 |
+| Cheater_Report_Channel_Id  | Integer | 0000000000 |
+| Report_Archives_Channel_Id  | Integer | 0000000000 |
 | Webhook  | String  | Empty  |
 | Custom_Message  | String  | A new **Report** has been summitted :pencil:  |
-| LocalReportColor  | String  | 255  |
-| CheaterReportColor  | String | 16711680  |
-| AcMessage  | String | A new report has been submitted - Check Discord  |
-| VerboseMode  | Boolean  | false  |
+| Local_Report_Color  | String  | 255  |
+| Cheater_Report_Color  | String | 16711680  |
+| Ac_Message  | String | A new report has been submitted - Check Discord  |
+| Global_Badge_Lookup | Boolean | true |
+| Verbose_Mode  | Boolean  | false  |
 
 * **Is_Enabled:** Defines if the plugin will be enabled or not. Only enter `true` or `false`.
 
@@ -28,7 +32,15 @@ This plugin **WILL NOT WORK** on previous versions
 
 * **Server_Name:** Defines the name you wish the embed to refer to the server as instead of the default. 
 
-* **Local_Role_Ids + Cheater_Role_Ids:** A list of pingable role ids in the format of <@&id> <@&id>. The @ defines it as a mention and the & specifies it is a role. These will be sent for local reports and cheater reports respectively. To get an ID of a role see help section.
+* **Local_Role_Ids + Cheater_Role_Ids:** A list of pingable role ids in the format of <@&id> <@&id>. The `@` defines it as a mention and the `&` specifies it is a role. These will be sent for local reports and cheater reports respectively. To get an ID of a role see help section.
+
+* **Management_Role_Ids:** A list of pingable role ids in the format off <@&id> <@&id>. The `@` defines it as a mention and `&` specifies it is a role. These will be sent for staff getting reported and when a report is not claimed.
+
+* **Local_Report_Channel_Id:** An integer value representing the Discord Server Channel ID where Local Reports will be sent. If you do not change this from the base it will not start and the plugin will alert you in console.
+
+* **Cheater_Report_Channel_Id:** An integer value representing the Discord Server Channel ID where Cheater Reports will be sent. If you do not change this from the base it will not start and the plugin will alert you in console.
+
+* **Report_Archives_Channel_Id:** An integer value representing the Discord Server Channel ID where all Reports will be sent once completed. It is recommended to make this a seperate channel to the regular logging channels. If you do not change this from the base it will send a warning to the console.
 
 * **Webhook:** The webhook URL. Make sure to paste the entire thing. For help see below.
 
@@ -37,6 +49,8 @@ This plugin **WILL NOT WORK** on previous versions
 * **Local_Report_Color + Cheater_Report_Color:** These are decimal values of colours. To convert your hex to decimal you can use [this website](https://www.mathsisfun.com/hexadecimal-decimal-colors.html "Convert Hexadecimal to decimal"). Despite being string you must only use decimal!!! These will be changed respectively.
 
 * **Ac_Message:** Defines the message that will be sent ingame to anyone that has remote admin chat.
+
+* **Global_Badge_Lookup:** Is a bool (true/false) defining whether you want the plugin to check for Players Global Badges when sending reports. If enabled and a user has a Global Badge then that Badge will be sent in reports over server ones.
 
 * **Verbose_Mode:** Outputs more console information if enabled. Only enter `true` or `false`.
 
@@ -81,9 +95,12 @@ This plugin **WILL NOT WORK** on previous versions
 <h1>Info & Contact</h1>
 This plugin was created due to extraordinary request by server owners running exiled servers. 
 
-BetterReporting is a port of Report-INtegration.
-This plugin was made in collaboration by [Somewhatsane](https://github.com/SomewhatSane "SomewhatSane") & Myself using Rin's original Report-INtegration. 
+Better Reporting is a port of Report-INtegration.
 
-For help or issues Contact me on Discord @ XoMiya#6113 or join my [discord](https://discord.gg/DxWXw9jmXn "XoMiya's Kitchen").
+This plugin was made in collaboration by [Somewhatsane](https://github.com/SomewhatSane "SomewhatSane") & Myself.
+
+
+For help or issues check out the [Setup Guide](https://www.betterreporting.net/index.php/setup-guide "Setup Guide | Better Reporting") or alternatively Contact me by joining my [discord](https://discord.gg/DxWXw9jmXn "XoMiya's Kitchen").
 
 ![img](https://img.shields.io/github/downloads/XoMiya-WPC/BetterReporting/total?style=for-the-badge)
+
