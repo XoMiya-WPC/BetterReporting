@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterReporting", "BetterReporting\BetterReporting.csproj", "{0EF8D379-C9E2-4B9D-9EF1-F2CE60766F37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotPostTesting", "DotPostTesting\DotPostTesting.csproj", "{7164FD5C-C679-4434-B5DF-78854C666574}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EF8D379-C9E2-4B9D-9EF1-F2CE60766F37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EF8D379-C9E2-4B9D-9EF1-F2CE60766F37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EF8D379-C9E2-4B9D-9EF1-F2CE60766F37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EF8D379-C9E2-4B9D-9EF1-F2CE60766F37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7164FD5C-C679-4434-B5DF-78854C666574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7164FD5C-C679-4434-B5DF-78854C666574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7164FD5C-C679-4434-B5DF-78854C666574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7164FD5C-C679-4434-B5DF-78854C666574}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE26BC66-B734-48F0-951B-0F476CBF88F1}
+	EndGlobalSection
+EndGlobal
