@@ -105,7 +105,7 @@ namespace BetterReporting.Handlers
                 TargetActiveFlags = "No Active Flags";
 
             //Colour Creator
-            uint FinalReportColor = plugin.Config.DefaultLCheaterReportColor;
+            uint FinalReportColor = plugin.Config.DefaultCheaterReportColor;
             foreach (var keyword in plugin.Config.ReportColorFlags)
                 if (ev.Reason.Contains(keyword.Key))
                     FinalReportColor = keyword.Value;

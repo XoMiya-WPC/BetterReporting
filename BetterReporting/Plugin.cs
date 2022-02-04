@@ -57,7 +57,7 @@ namespace BetterReporting
             }
             try
             {
-                var DefaultLCheaterReportColors = Config.DefaultLCheaterReportColor + 1;
+                var DefaultLCheaterReportColors = Config.DefaultCheaterReportColor + 1;
             }
             catch (InvalidCastException e)
             {

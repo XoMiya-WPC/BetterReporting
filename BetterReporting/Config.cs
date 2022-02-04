@@ -1,4 +1,4 @@
-using Exiled.API.Interfaces;
+﻿using Exiled.API.Interfaces;
 using System.Collections.Generic;
 using System.ComponentModel;
 
@@ -31,7 +31,7 @@ namespace BetterReporting
         [Description("You can visit this website for help converting your colours: https://www.mathsisfun.com/hexadecimal-decimal-colors.html. This is the custom DECIMAL colour of your embed for Local Reports if no Report Colour Flags are apparent. If you have a hex colour code, please convert it first to decimal. - Accepts Decimal")]
         public uint DefaultLocalReportColor { get; set; } = 16711680;
         [Description("This is the custom DECIMAL colour of your embed for Cheater Reports if no Report Colour Flags are apparent. If you have a hex colour code, please convert it first to decimal. - Accepts Decimal")]
-        public uint DefaultLCheaterReportColor { get; set; } = 16711680;
+        public uint DefaultCheaterReportColor { get; set; } = 16711680;
         [Description("Report Colour Flags - Have report auto change colour based on report message contents (string: uint)")]
 
         public Dictionary<string, uint> ReportColorFlags { get; private set; } = new Dictionary<string, uint>
