@@ -30,12 +30,12 @@ namespace BetterReporting.Handlers
 
             //Concatinate CheaterReport Role Ids
             var CheaterRoleIdsString = "";
-            if (ev.Target.RemoteAdminAccess)
+            if (ev.Target.RemoteAdminAccess && plugin.Config.PingForRa)
             {
-            CheaterRoleIdsString = plugin.Config.CheaterRoleIds + " " + plugin.Config.ManagementRoleIds;
-            Log.Info("[FLAG 1] - Warning a user with Remote Admin Authentication has been Target to Northwood Global Moderation Team for Cheating.");
+                CheaterRoleIdsString = plugin.Config.CheaterRoleIds + " " + plugin.Config.ManagementRoleIds;
+                Log.Info("[FLAG 1] - Warning a user with Remote Admin Authentication has been Target to Northwood Global Moderation Team for Cheating.");
             }
-            else if (!ev.Target.RemoteAdminAccess)
+            else
                 CheaterRoleIdsString = plugin.Config.CheaterRoleIds;
             
            
@@ -240,8 +240,8 @@ namespace BetterReporting.Handlers
                     ev.Issuer.Broadcast(5, "Sending Broadcast Inspector...");
                 else
                 {
-                   ev.Issuer.Broadcast(5, "You cannot report yourself!");
-                   return;
+                    ev.Issuer.Broadcast(5, "You cannot report yourself!");
+                    return;
                 }
             }
             //Check for and prevent reporting of Northwood Staff.
@@ -253,9 +253,9 @@ namespace BetterReporting.Handlers
 
             //Role Ping Concatenation
             var LocalRoleIdsString = "";
-            if (ev.Target.RemoteAdminAccess)
-                LocalRoleIdsString = plugin.Config.LocalRoleIds + " " + plugin.Config.ManagementRoleIds;
-            else if (!ev.Target.RemoteAdminAccess)
+            if (plugin.Config.PingForRa && ev.Target.RemoteAdminAccess)
+                    LocalRoleIdsString = plugin.Config.LocalRoleIds + " " + plugin.Config.ManagementRoleIds;        
+            else
                 LocalRoleIdsString = plugin.Config.LocalRoleIds;
 
             //Server Name Config Checks

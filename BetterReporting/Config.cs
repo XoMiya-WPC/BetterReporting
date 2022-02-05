@@ -18,6 +18,8 @@ namespace BetterReporting
         public string CheaterRoleIds { get; set; }
         [Description("List of role IDs that will be pinged if a user with remote admin authentication is reported. This role should probably mention some management or something. - Accepts String (Example '<@&managerid> <@&ownerid> ').")]
         public string ManagementRoleIds { get; set; }
+        [Description("Decides if users with Remote Admin Authentication being reported will result in management role ids getting pinged as well.")]
+        public bool PingForRa { get; set; } = false;
         /*[Description("Local Report Channel ID that will dictate where to send Local Reports - Accepts Integer")]
         public ulong LocalReportChannelId { get; set; } = 123456789;
         [Description("Cheater Report Channel ID that will dictate where to send Cheater Reports - Accepts Integer")]

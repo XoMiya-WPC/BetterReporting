@@ -17,8 +17,8 @@ namespace BetterReporting
         public override string Prefix { get; } = "Better_Reporting";
         public override Version RequiredExiledVersion { get; } = new Version("4.2.3");
         public static readonly string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        public override Version Version { get; } = new Version("1.3.0");
-        internal const string lastModified = "04/02/2022";
+        public override Version Version { get; } = new Version("1.3.1");
+        internal const string lastModified = "05/02/2022";
 
         public override void OnEnabled()
         {
