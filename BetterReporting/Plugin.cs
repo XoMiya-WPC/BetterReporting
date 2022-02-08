@@ -2,6 +2,7 @@
 using System.Reflection;
 using Exiled.API.Features;
 using BetterReporting.Handlers;
+using BetterReporting.Commands.ReportClaim;
 using ServerEvents = Exiled.Events.Handlers.Server;
 using PlayerEvents = Exiled.Events.Handlers.Player;
 
@@ -12,15 +13,16 @@ namespace BetterReporting
         public ServerEventHandlers ServerEventHandlers;
         public HttpHandler HttpHandler;
         public PlayerEventHandlers PlayerEventHandlers;
+        //public ReportClaim ReportClaim;
         public override string Name { get; } = "BetterReporting";
         public override string Author { get; } = "XoMiya-WPC, SomewhatSane";
         public override string Prefix { get; } = "Better_Reporting";
         public override Version RequiredExiledVersion { get; } = new Version("4.2.3");
         public static readonly string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        public override Version Version { get; } = new Version("1.3.1");
-        internal const string lastModified = "05/02/2022";
+        public override Version Version { get; } = new Version("1.3.2");
+        internal const string lastModified = "07/02/2022";
 
-        public override void OnEnabled()
+        public override void OnEnabled() 
         {
             Log.Info("BetterReporting is Starting... Checking Configs...");
             //Log.Info($"{Name} V{version} by {Author}. Last modified: {lastModified}.");
@@ -72,7 +74,7 @@ namespace BetterReporting
             if (string.IsNullOrEmpty(Config.ManagementRoleIds))
                 Log.Warn("[Warn Code 3] You have not provided any Management Role Ids to be mentioned.");
             HttpHandler = new HttpHandler(this);
-
+            //ReportClaim = new ReportClaim(this);
             ServerEventHandlers = new ServerEventHandlers(this);
             ServerEvents.ReportingCheater += ServerEventHandlers.CheaterReport;
             ServerEvents.LocalReporting += ServerEventHandlers.LocalReport;
@@ -80,6 +82,7 @@ namespace BetterReporting
             PlayerEvents.Verified += PlayerEventHandlers.OnVerified;
             if (Config.VerboseMode)
                 Log.Info("Verbose Mode is enabled! Will print extra (debug) console messages.");
+            Log.Info("Thank you for using BetterReporting - Making Moderation Easier");
             base.OnEnabled();
         }
 
@@ -90,6 +93,8 @@ namespace BetterReporting
             PlayerEvents.Verified -= PlayerEventHandlers.OnVerified;
             PlayerEventHandlers = null;
             ServerEventHandlers = null;
+            //ReportClaim = null;
+            HttpHandler = null;
 
             Log.Info("Disabled");
         }

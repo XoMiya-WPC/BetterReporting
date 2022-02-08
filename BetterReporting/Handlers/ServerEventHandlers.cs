@@ -59,15 +59,21 @@ namespace BetterReporting.Handlers
             string TargetBadgeStatus = "";
             if (plugin.Config.GlobalBadgeLookup)
             {
-                IssuerBadgeStatus = ev.Issuer.GlobalBadge.HasValue ? ev.Issuer.GlobalBadge.Value.Text : !string.IsNullOrEmpty(ev.Issuer.RankName) ? ev.Issuer.RankName : "No Badge";
-                TargetBadgeStatus = ev.Target.GlobalBadge.HasValue ? ev.Target.GlobalBadge.Value.Text : !string.IsNullOrEmpty(ev.Target.RankName) ? ev.Target.RankName : "No Badge";
+                IssuerBadgeStatus = ev.Issuer.GlobalBadge.HasValue? ev.Issuer.GlobalBadge.Value.Text : string.IsNullOrEmpty(ev.Issuer.RankName) ? string.IsNullOrEmpty(ev.Issuer.ReferenceHub.serverRoles.HiddenBadge) ? "No badge" : ev.Issuer.ReferenceHub.serverRoles.HiddenBadge : ev.Issuer.RankName;
+                //IssuerBadgeStatus = ev.Issuer.GlobalBadge.HasValue ? ev.Issuer.GlobalBadge.Value.Text : !string.IsNullOrEmpty(ev.Issuer.RankName) ? ev.Issuer.RankName : "No Badge";
+                TargetBadgeStatus = ev.Target.GlobalBadge.HasValue ? ev.Target.GlobalBadge.Value.Text : string.IsNullOrEmpty(ev.Target.RankName) ? string.IsNullOrEmpty(ev.Target.ReferenceHub.serverRoles.HiddenBadge) ? "No badge" : ev.Target.ReferenceHub.serverRoles.HiddenBadge : ev.Target.RankName;
+                //TargetBadgeStatus = ev.Target.GlobalBadge.HasValue ? ev.Target.GlobalBadge.Value.Text : !string.IsNullOrEmpty(ev.Target.RankName) ? ev.Target.RankName : "No Badge";
+
             }
             else
             {
-                IssuerBadgeStatus = !string.IsNullOrEmpty(ev.Issuer.RankName) ? ev.Issuer.RankName : "No Badge";
-                TargetBadgeStatus = !string.IsNullOrEmpty(ev.Target.RankName) ? ev.Target.RankName : "No Badge";
+                IssuerBadgeStatus = string.IsNullOrEmpty(ev.Issuer.RankName) ? string.IsNullOrEmpty(ev.Issuer.ReferenceHub.serverRoles.HiddenBadge) ? "No badge" : ev.Issuer.ReferenceHub.serverRoles.HiddenBadge : ev.Issuer.RankName;
+                //IssuerBadgeStatus = !string.IsNullOrEmpty(ev.Issuer.RankName) ? ev.Issuer.RankName : "No Badge";
+                TargetBadgeStatus = string.IsNullOrEmpty(ev.Target.RankName) ? string.IsNullOrEmpty(ev.Target.ReferenceHub.serverRoles.HiddenBadge) ? "No badge" : ev.Target.ReferenceHub.serverRoles.HiddenBadge : ev.Target.RankName;
+                //TargetBadgeStatus = !string.IsNullOrEmpty(ev.Target.RankName) ? ev.Target.RankName : "No Badge";
             }
 
+            
             //Flag Checks
             string IssuerActiveFlags = "";
             string TargetActiveFlags = "";
@@ -215,7 +221,7 @@ namespace BetterReporting.Handlers
             };
             if (plugin.Config.VerboseMode)
                 Log.Debug($"A new cheater report has been made. Sending report to Discord... JSON: {Encoding.UTF8.GetString(JsonSerializer.Serialize<object>(webHook))}");
-            ev.Issuer.Broadcast(10, "Thank you for submitting a Cheater Report. Local Administrators & Northwood Studios Global Moderation Team have been notified");
+            ev.Issuer.Broadcast(10, "Thank you for submitting a Cheater Report. Local Administrators & Northwood Studios Global Moderation Team have been notified.");
             StringContent reportStringContent = new StringContent(Encoding.UTF8.GetString(JsonSerializer.Serialize<object>(webHook)), Encoding.UTF8, "application/json");
             _ = plugin.HttpHandler.Send(plugin.Config.Webhook, reportStringContent);
             foreach (var user in Player.List)
@@ -273,9 +279,24 @@ namespace BetterReporting.Handlers
             if (TargetRole == "None")
                 TargetRole = "Spectator";
 
-            //Global Badge Checks
-            string IssuerBadgeStatus = ev.Issuer.GlobalBadge.HasValue ? ev.Issuer.GlobalBadge.Value.Text : !string.IsNullOrEmpty(ev.Issuer.RankName) ? ev.Issuer.RankName : "No badge";
-            string TargetBadgeStatus = ev.Target.GlobalBadge.HasValue ? ev.Target.GlobalBadge.Value.Text : !string.IsNullOrEmpty(ev.Target.RankName) ? ev.Target.RankName : "No badge";
+            //Badge Checks
+            string IssuerBadgeStatus = "";
+            string TargetBadgeStatus = "";
+            if (plugin.Config.GlobalBadgeLookup)
+            {
+                IssuerBadgeStatus = ev.Issuer.GlobalBadge.HasValue ? ev.Issuer.GlobalBadge.Value.Text : string.IsNullOrEmpty(ev.Issuer.RankName) ? string.IsNullOrEmpty(ev.Issuer.ReferenceHub.serverRoles.HiddenBadge) ? "No badge" : ev.Issuer.ReferenceHub.serverRoles.HiddenBadge : ev.Issuer.RankName;
+                //IssuerBadgeStatus = ev.Issuer.GlobalBadge.HasValue ? ev.Issuer.GlobalBadge.Value.Text : !string.IsNullOrEmpty(ev.Issuer.RankName) ? ev.Issuer.RankName : "No Badge";
+                TargetBadgeStatus = ev.Target.GlobalBadge.HasValue ? ev.Target.GlobalBadge.Value.Text : string.IsNullOrEmpty(ev.Target.RankName) ? string.IsNullOrEmpty(ev.Target.ReferenceHub.serverRoles.HiddenBadge) ? "No badge" : ev.Target.ReferenceHub.serverRoles.HiddenBadge : ev.Target.RankName;
+                //TargetBadgeStatus = ev.Target.GlobalBadge.HasValue ? ev.Target.GlobalBadge.Value.Text : !string.IsNullOrEmpty(ev.Target.RankName) ? ev.Target.RankName : "No Badge";
+
+            }
+            else
+            {
+                IssuerBadgeStatus = string.IsNullOrEmpty(ev.Issuer.RankName) ? string.IsNullOrEmpty(ev.Issuer.ReferenceHub.serverRoles.HiddenBadge) ? "No badge" : ev.Issuer.ReferenceHub.serverRoles.HiddenBadge : ev.Issuer.RankName;
+                //IssuerBadgeStatus = !string.IsNullOrEmpty(ev.Issuer.RankName) ? ev.Issuer.RankName : "No Badge";
+                TargetBadgeStatus = string.IsNullOrEmpty(ev.Target.RankName) ? string.IsNullOrEmpty(ev.Target.ReferenceHub.serverRoles.HiddenBadge) ? "No badge" : ev.Target.ReferenceHub.serverRoles.HiddenBadge : ev.Target.RankName;
+                //TargetBadgeStatus = !string.IsNullOrEmpty(ev.Target.RankName) ? ev.Target.RankName : "No Badge";
+            }
 
             //Flag Checks
             string IssuerActiveFlags = "";
@@ -319,7 +340,7 @@ namespace BetterReporting.Handlers
                 if (ev.Reason.Contains(keyword.Key))
                     FinalReportColor = keyword.Value;
 
-
+            //Beginning WebHook Creation
             var webHook = new
             {
                 content = plugin.Config.CustomMessage + "\n" + LocalRoleIdsString,
@@ -424,7 +445,7 @@ namespace BetterReporting.Handlers
             };           
             if (plugin.Config.VerboseMode)
                 Log.Debug($"A new local report has been made. Sending report to Discord... JSON: {Encoding.UTF8.GetString(JsonSerializer.Serialize<object>(webHook))}");
-            ev.Issuer.Broadcast(5, "Thank you for submitting a Report.");
+            ev.Issuer.Broadcast(5, "Thank you for submitting a Report. Local Administrators have been notified.");
             StringContent reportStringContent = new StringContent(Encoding.UTF8.GetString(JsonSerializer.Serialize<object>(webHook)), Encoding.UTF8, "application/json");
             _ = plugin.HttpHandler.Send(plugin.Config.Webhook, reportStringContent);
             foreach (var user in Player.List)

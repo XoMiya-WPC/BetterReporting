@@ -41,6 +41,9 @@
     <Reference Include="Assembly-CSharp_publicized">
       <HintPath>..\References\Assembly-CSharp_publicized.dll</HintPath>
     </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>G:\SteamLibrary\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\CommandSystem.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Exiled.API, Version=4.2.3.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\EXILED.4.2.3\lib\net472\Exiled.API.dll</HintPath>
     </Reference>
@@ -78,6 +81,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\ReportClaim\ReportClaim.cs" />
+    <Compile Include="Commands\Test\Test.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Handlers\HttpHandler.cs" />
     <Compile Include="Handlers\PlayerEventHandlers.cs" />
@@ -90,5 +95,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
