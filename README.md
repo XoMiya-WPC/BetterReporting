@@ -3,7 +3,7 @@ An SCP: Secret Laboratory Plugin that runs on the [EXILED Framework](https://git
 
 <h2>Requirements</h2>
 
-This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") `4.2.3`
+This plugin requires [EXILED](https://github.com/Exiled-Team/EXILED/releases "Exiled Releases") `4.2.5`
 This plugin **WILL NOT WORK** on previous versions
 <h2>Config</h2>
 
@@ -15,6 +15,7 @@ This plugin **WILL NOT WORK** on previous versions
 | Local_Role_Ids  | String  | Empty  |
 | Cheater_Role_Ids  | String  | Empty  |
 | Management_Role_Ids  | String  | Empty  |
+| Ping_For_Ra  | Boolean  | false | 
 | Webhook  | String  | Empty  |
 | Custom_Message  | String  | A new **Report** has been summitted :pencil:  |
 | Default_Local_Report_Color  | uint  | 16711680  |
@@ -33,6 +34,8 @@ This plugin **WILL NOT WORK** on previous versions
 * **Local_Role_Ids + Cheater_Role_Ids:** A list of pingable role ids in the format of <@&id> <@&id>. The `@` defines it as a mention and the `&` specifies it is a role. These will be sent for local reports and cheater reports respectively. To get an ID of a role see help section.
 
 * **Management_Role_Ids:** A list of pingable role ids in the format off <@&id> <@&id>. The `@` defines it as a mention and `&` specifies it is a role. These will be sent for staff getting reported and when a report is not claimed.
+
+* **Ping_For_RA:** Decides if the plugin should ping if a user with RA Auth is reported. 
 
 * **Webhook:** The webhook URL. Make sure to paste the entire thing. For help see below.
 
