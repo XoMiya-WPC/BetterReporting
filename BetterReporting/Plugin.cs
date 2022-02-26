@@ -10,6 +10,7 @@ namespace BetterReporting
 {
     public class Plugin : Plugin<Config>
     {
+        public static Plugin Instance;
         public ServerEventHandlers ServerEventHandlers;
         public HttpHandler HttpHandler;
         public PlayerEventHandlers PlayerEventHandlers;
@@ -17,13 +18,14 @@ namespace BetterReporting
         public override string Name { get; } = "BetterReporting";
         public override string Author { get; } = "XoMiya-WPC, SomewhatSane";
         public override string Prefix { get; } = "Better_Reporting";
-        public override Version RequiredExiledVersion { get; } = new Version("4.2.3");
+        public override Version RequiredExiledVersion { get; } = new Version("4.2.5");
         public static readonly string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-        public override Version Version { get; } = new Version("1.3.2");
-        internal const string lastModified = "07/02/2022";
+        public override Version Version { get; } = new Version("1.3.3");
+        internal const string lastModified = "26/02/2022";
 
         public override void OnEnabled() 
         {
+            Instance = this;
             Log.Info("BetterReporting is Starting... Checking Configs...");
             //Log.Info($"{Name} V{version} by {Author}. Last modified: {lastModified}.");
             if (string.IsNullOrWhiteSpace(Config.Webhook))
@@ -95,6 +97,7 @@ namespace BetterReporting
             ServerEventHandlers = null;
             //ReportClaim = null;
             HttpHandler = null;
+            Instance = null;
 
             Log.Info("Disabled");
         }
