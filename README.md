@@ -98,7 +98,7 @@ This plugin was created due to extraordinary request by server owners running ex
 This plugin was made in collaboration by [Somewhatsane](https://github.com/SomewhatSane "SomewhatSane") & Myself.
 
 
-For help or issues check out the [Setup Guide](https://www.betterreporting.net/index.php/setup-guide "Setup Guide | Better Reporting") or alternatively Contact me by joining my [discord](https://discord.gg/DxWXw9jmXn "XoMiya's Kitchen").
+For help or issues check out the [Setup Guide](https://www.betterreporting.net/index.php/setup-guide "Setup Guide | Better Reporting") or alternatively Contact me by joining my [discord](https://discord.gg/js4W9M5Csq "XoMiya's Kitchen").
 
 <h2>Default Config Generated</h2>
 
